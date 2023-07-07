@@ -1,6 +1,7 @@
-﻿namespace MiPrimerApp
+﻿
+namespace MiPrimerApp
 {
-    partial class Form1
+    partial class FormCatalogo
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,13 +29,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.dgvArticulos = new System.Windows.Forms.DataGridView();
+            this.pibArticulos = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibArticulos)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgvArticulos
+            // 
+            this.dgvArticulos.BackgroundColor = System.Drawing.Color.Bisque;
+            this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArticulos.Location = new System.Drawing.Point(54, 63);
+            this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.RowHeadersWidth = 51;
+            this.dgvArticulos.RowTemplate.Height = 24;
+            this.dgvArticulos.Size = new System.Drawing.Size(601, 337);
+            this.dgvArticulos.TabIndex = 0;
+            this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
+            // 
+            // pibArticulos
+            // 
+            this.pibArticulos.Location = new System.Drawing.Point(677, 67);
+            this.pibArticulos.Name = "pibArticulos";
+            this.pibArticulos.Size = new System.Drawing.Size(230, 333);
+            this.pibArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pibArticulos.TabIndex = 1;
+            this.pibArticulos.TabStop = false;
+            // 
+            // FormCatalogo
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.BackColor = System.Drawing.Color.NavajoWhite;
+            this.ClientSize = new System.Drawing.Size(935, 528);
+            this.Controls.Add(this.pibArticulos);
+            this.Controls.Add(this.dgvArticulos);
+            this.Name = "FormCatalogo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Catalogo";
+            this.Load += new System.EventHandler(this.FormCatalogo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibArticulos)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dgvArticulos;
+        private System.Windows.Forms.PictureBox pibArticulos;
     }
 }
 
