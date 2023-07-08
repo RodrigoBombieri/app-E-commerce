@@ -14,6 +14,7 @@ namespace MiPrimerApp
 {
     public partial class FormCatalogo : Form
     {
+        // Creo una lista para manipular la lista de articulos
         private List<Articulo> listaArticulos;
         public FormCatalogo()
         {
@@ -43,9 +44,11 @@ namespace MiPrimerApp
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
+                // se recibe el datasource y se modela el formulario, e invocamos el método listar que devuelve el listado que configuramos
                 listaArticulos = negocio.listar();
                 dgvArticulos.DataSource = listaArticulos;
                 ocultarColumnas();
+                // llama a la función para cargar la imágen en la primera posición
                 CargarImagen(listaArticulos[0].UrlImagen);
             }
             catch (Exception ex)
@@ -75,6 +78,11 @@ namespace MiPrimerApp
             }
         }
 
-        
+        private void btnAgregarArticulo_Click(object sender, EventArgs e)
+        {
+            FormAltaArticulo alta = new FormAltaArticulo();
+            alta.ShowDialog();
+            Cargar();
+        }
     }
 }

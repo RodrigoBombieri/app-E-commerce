@@ -31,13 +31,14 @@ namespace MiPrimerApp
         {
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.pibArticulos = new System.Windows.Forms.PictureBox();
+            this.btnAgregarArticulo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pibArticulos)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvArticulos
             // 
-            this.dgvArticulos.BackgroundColor = System.Drawing.Color.Bisque;
+            this.dgvArticulos.BackgroundColor = System.Drawing.Color.DarkTurquoise;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.Location = new System.Drawing.Point(54, 63);
             this.dgvArticulos.Name = "dgvArticulos";
@@ -49,19 +50,33 @@ namespace MiPrimerApp
             // 
             // pibArticulos
             // 
+            this.pibArticulos.BackColor = System.Drawing.Color.DarkTurquoise;
             this.pibArticulos.Location = new System.Drawing.Point(677, 67);
             this.pibArticulos.Name = "pibArticulos";
-            this.pibArticulos.Size = new System.Drawing.Size(230, 333);
+            this.pibArticulos.Size = new System.Drawing.Size(256, 333);
             this.pibArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pibArticulos.TabIndex = 1;
             this.pibArticulos.TabStop = false;
+            // 
+            // btnAgregarArticulo
+            // 
+            this.btnAgregarArticulo.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnAgregarArticulo.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarArticulo.Location = new System.Drawing.Point(54, 433);
+            this.btnAgregarArticulo.Name = "btnAgregarArticulo";
+            this.btnAgregarArticulo.Size = new System.Drawing.Size(139, 51);
+            this.btnAgregarArticulo.TabIndex = 2;
+            this.btnAgregarArticulo.Text = "Agregar Artículo";
+            this.btnAgregarArticulo.UseVisualStyleBackColor = false;
+            this.btnAgregarArticulo.Click += new System.EventHandler(this.btnAgregarArticulo_Click);
             // 
             // FormCatalogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(935, 528);
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.ClientSize = new System.Drawing.Size(1009, 636);
+            this.Controls.Add(this.btnAgregarArticulo);
             this.Controls.Add(this.pibArticulos);
             this.Controls.Add(this.dgvArticulos);
             this.Name = "FormCatalogo";
@@ -78,6 +93,7 @@ namespace MiPrimerApp
 
         private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.PictureBox pibArticulos;
+        private System.Windows.Forms.Button btnAgregarArticulo;
     }
 }
 
