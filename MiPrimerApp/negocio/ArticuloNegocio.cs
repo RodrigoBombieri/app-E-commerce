@@ -30,7 +30,8 @@ namespace negocio
                 while(lector.Read())
                 {
                     Articulo aux = new Articulo();
-                    
+
+                    if (!(lector["Id"] is DBNull))
                     aux.Id = (int)lector["Id"];
                     aux.Codigo = (string)lector["Codigo"];
                     aux.Nombre = (string)lector["Nombre"];

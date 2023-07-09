@@ -58,6 +58,8 @@ namespace MiPrimerApp
             }
         }
 
+
+
         private void ocultarColumnas()
         {
             dgvArticulos.Columns["Id"].Visible = false;
@@ -84,5 +86,8 @@ namespace MiPrimerApp
             alta.ShowDialog();
             Cargar();
         }
+
+
+      
     }
 }

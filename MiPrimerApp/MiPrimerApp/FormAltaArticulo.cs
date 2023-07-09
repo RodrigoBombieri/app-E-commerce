@@ -80,5 +80,23 @@ namespace MiPrimerApp
             }
 
         }
+
+        private void txtUrlImagen_Leave(object sender, EventArgs e)
+        {
+            cargarImagen(txtUrlImagen.Text);
+        }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pibArticulo.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+
+                pibArticulo.Load("https://img.freepik.com/premium-vector/no-photo-available-vector-icon-default-image-symbol-picture-coming-soon-web-site-mobile-app_87543-10615.jpg?w=900");
+            }
+        }
     }
 }
