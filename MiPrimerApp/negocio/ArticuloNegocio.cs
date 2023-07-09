@@ -35,14 +35,15 @@ namespace negocio
                     aux.Codigo = (string)lector["Codigo"];
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
-                    if (!(lector["imagenUrl"] is DBNull))
-                    aux.UrlImagen = (string)lector["imagenUrl"];
                     aux.Marca = new Marca();
                     aux.Marca.Id = (int)lector["IdMarca"];
                     aux.Marca.Descripcion = (string)lector["Marca"];
                     aux.Categoria = new Categoria();
                     aux.Categoria.Id = (int)lector["IdCategoria"];
                     aux.Categoria.Descripcion = (string)lector["Categoria"];
+                    if (!(lector["ImagenUrl"] is DBNull))
+                    aux.UrlImagen = (string)lector["ImagenUrl"];
+                    aux.Precio = (decimal)lector["Precio"];
 
                     lista.Add(aux);
                 }
@@ -55,6 +56,59 @@ namespace negocio
             {
 
                 throw ex;
+            }
+        }
+
+        public void agregar(Articulo nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("Insert into ARTICULOS(Codigo, Nombre, Descripcion, IdMarca, IdCategoria, UrlImagen, Precio)values(" + nuevo.Codigo + " , '" + nuevo.Nombre + "' , '" + nuevo.Descripcion + "' , @idMarca, @idCategoria, @urlImagen ,'" + nuevo.Precio + "') ");
+                datos.setearParametro("@idMarca", nuevo.Marca.Id);
+                datos.setearParametro("@idCategoria", nuevo.Categoria.Id);
+                datos.setearParametro("@urlImagen", nuevo.UrlImagen);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void modificar(Articulo artic)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("Update ARTICULOS set Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idMarca, IdCategoria = @idCategoria, UrlImagen = @urlImagen, Precio = @precio Where Id = @id");
+                datos.setearParametro("@codigo", artic.Codigo);
+                datos.setearParametro("@nombre", artic.Nombre);
+                datos.setearParametro("@descripcion", artic.Descripcion);
+                datos.setearParametro("@idMarca", artic.Marca.Id);
+                datos.setearParametro("@idCategoria", artic.Categoria.Id);
+                datos.setearParametro("@urlImagen", artic.UrlImagen);
+                datos.setearParametro("@precio", artic.Precio);
+                datos.setearParametro("@id", artic.Id);
+
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
             }
         }
     }
