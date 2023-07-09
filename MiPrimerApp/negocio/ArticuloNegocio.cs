@@ -66,7 +66,7 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("Insert into ARTICULOS(Codigo, Nombre, Descripcion, IdMarca, IdCategoria, UrlImagen, Precio)values(" + nuevo.Codigo + " , '" + nuevo.Nombre + "' , '" + nuevo.Descripcion + "' , @idMarca, @idCategoria, @urlImagen ,'" + nuevo.Precio + "') ");
+                datos.setearConsulta("Insert into ARTICULOS(Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl, Precio)values('" + nuevo.Codigo + "' , '" + nuevo.Nombre + "' , '" + nuevo.Descripcion + "' , @idMarca, @idCategoria, @urlImagen,'" + nuevo.Precio + "')");
                 datos.setearParametro("@idMarca", nuevo.Marca.Id);
                 datos.setearParametro("@idCategoria", nuevo.Categoria.Id);
                 datos.setearParametro("@urlImagen", nuevo.UrlImagen);
@@ -89,7 +89,7 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("Update ARTICULOS set Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idMarca, IdCategoria = @idCategoria, UrlImagen = @urlImagen, Precio = @precio Where Id = @id");
+                datos.setearConsulta("Update ARTICULOS set Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idMarca, IdCategoria = @idCategoria, ImagenUrl = @urlImagen, Precio = @precio Where Id = @id");
                 datos.setearParametro("@codigo", artic.Codigo);
                 datos.setearParametro("@nombre", artic.Nombre);
                 datos.setearParametro("@descripcion", artic.Descripcion);

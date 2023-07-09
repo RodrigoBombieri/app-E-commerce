@@ -224,6 +224,7 @@
             this.Controls.Add(this.pibArticulo);
             this.Name = "FormAltaArticulo";
             this.Text = "FormAltaArticulo";
+            this.Load += new System.EventHandler(this.FormAltaArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pibArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
