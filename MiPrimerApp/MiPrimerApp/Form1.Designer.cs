@@ -88,6 +88,7 @@ namespace MiPrimerApp
             this.btnModificarArticulo.TabIndex = 3;
             this.btnModificarArticulo.Text = "Modificar Articulo";
             this.btnModificarArticulo.UseVisualStyleBackColor = false;
+            this.btnModificarArticulo.Click += new System.EventHandler(this.btnModificarArticulo_Click);
             // 
             // FormCatalogo
             // 

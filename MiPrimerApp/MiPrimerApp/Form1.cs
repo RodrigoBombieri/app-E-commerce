@@ -87,7 +87,14 @@ namespace MiPrimerApp
             Cargar();
         }
 
-
-      
+        private void btnModificarArticulo_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado;
+            seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            
+            FormAltaArticulo modificar = new FormAltaArticulo(seleccionado);
+            modificar.ShowDialog();
+            Cargar();
+        }
     }
 }

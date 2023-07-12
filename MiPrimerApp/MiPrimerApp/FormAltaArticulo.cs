@@ -122,7 +122,11 @@ namespace MiPrimerApp
                     cboCategoria.SelectedValue = articulo.Categoria.Id;
                     txtUrlImagen.Text = articulo.UrlImagen;
                     txtPrecio.Text = articulo.Precio.ToString();
+
+                    cargarImagen(articulo.UrlImagen);
+
                 }
+
 
             }
             catch (Exception ex)
