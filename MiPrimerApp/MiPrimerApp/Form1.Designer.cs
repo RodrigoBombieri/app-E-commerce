@@ -33,6 +33,7 @@ namespace MiPrimerApp
             this.pibArticulos = new System.Windows.Forms.PictureBox();
             this.btnAgregarArticulo = new System.Windows.Forms.Button();
             this.btnModificarArticulo = new System.Windows.Forms.Button();
+            this.btnEliminarArticulo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pibArticulos)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +58,7 @@ namespace MiPrimerApp
             // 
             // pibArticulos
             // 
-            this.pibArticulos.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.pibArticulos.BackColor = System.Drawing.Color.Transparent;
             this.pibArticulos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pibArticulos.Location = new System.Drawing.Point(741, 67);
             this.pibArticulos.Name = "pibArticulos";
@@ -90,12 +91,25 @@ namespace MiPrimerApp
             this.btnModificarArticulo.UseVisualStyleBackColor = false;
             this.btnModificarArticulo.Click += new System.EventHandler(this.btnModificarArticulo_Click);
             // 
+            // btnEliminarArticulo
+            // 
+            this.btnEliminarArticulo.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnEliminarArticulo.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarArticulo.Location = new System.Drawing.Point(400, 433);
+            this.btnEliminarArticulo.Name = "btnEliminarArticulo";
+            this.btnEliminarArticulo.Size = new System.Drawing.Size(149, 51);
+            this.btnEliminarArticulo.TabIndex = 4;
+            this.btnEliminarArticulo.Text = "Eliminar Articulo";
+            this.btnEliminarArticulo.UseVisualStyleBackColor = false;
+            this.btnEliminarArticulo.Click += new System.EventHandler(this.btnEliminarArticulo_Click);
+            // 
             // FormCatalogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(1009, 636);
+            this.Controls.Add(this.btnEliminarArticulo);
             this.Controls.Add(this.btnModificarArticulo);
             this.Controls.Add(this.btnAgregarArticulo);
             this.Controls.Add(this.pibArticulos);
@@ -116,6 +130,7 @@ namespace MiPrimerApp
         private System.Windows.Forms.PictureBox pibArticulos;
         private System.Windows.Forms.Button btnAgregarArticulo;
         private System.Windows.Forms.Button btnModificarArticulo;
+        private System.Windows.Forms.Button btnEliminarArticulo;
     }
 }
 

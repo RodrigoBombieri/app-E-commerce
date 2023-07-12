@@ -96,5 +96,41 @@ namespace MiPrimerApp
             modificar.ShowDialog();
             Cargar();
         }
+
+        private void btnEliminarArticulo_Click(object sender, EventArgs e)
+        {
+            eliminar();
+        }
+
+        private void eliminar(bool logico = false)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            Articulo seleccionado;
+
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿De verdad querés eliminarlo?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if(respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+
+                    if(logico)
+                    {
+                        negocio.eliminar(seleccionado.Id);
+                    }
+                    else
+                    {
+                        negocio.eliminar(seleccionado.Id);
+                    }
+                    //Cuando eliminamos se actualiza la grilla
+                    Cargar();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }
