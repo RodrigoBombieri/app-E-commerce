@@ -132,5 +132,25 @@ namespace MiPrimerApp
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void txtFiltroRapido_TextChanged(object sender, EventArgs e)
+        {
+            List<Articulo> listafiltrada;
+            string filtro = txtFiltroRapido.Text;
+
+            if(filtro != "")
+            {
+                listafiltrada = listaArticulos.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.Marca.Descripcion.ToUpper().Contains(filtro.ToUpper()) || x.Categoria.Descripcion.ToUpper().Contains(filtro.ToUpper()));
+
+            }
+            else
+            {
+                listafiltrada = listaArticulos;
+            }
+
+            dgvArticulos.DataSource = null;
+            dgvArticulos.DataSource = listafiltrada;
+            ocultarColumnas();
+        }
     }
 }
