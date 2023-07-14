@@ -176,6 +176,7 @@ namespace MiPrimerApp
             this.cboCampo.Name = "cboCampo";
             this.cboCampo.Size = new System.Drawing.Size(121, 24);
             this.cboCampo.TabIndex = 11;
+            this.cboCampo.SelectedIndexChanged += new System.EventHandler(this.cboCampo_SelectedIndexChanged);
             // 
             // cboCriterio
             // 
@@ -201,6 +202,7 @@ namespace MiPrimerApp
             this.btnBuscar.TabIndex = 14;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // FormCatalogo
             // 

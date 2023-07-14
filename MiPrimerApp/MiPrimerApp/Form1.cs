@@ -24,6 +24,9 @@ namespace MiPrimerApp
         private void FormCatalogo_Load(object sender, EventArgs e)
         {
             Cargar();
+            cboCampo.Items.Add("Precio");
+            cboCampo.Items.Add("Nombre");
+            cboCampo.Items.Add("Descripción");
             
             
         }
@@ -151,6 +154,89 @@ namespace MiPrimerApp
             dgvArticulos.DataSource = null;
             dgvArticulos.DataSource = listafiltrada;
             ocultarColumnas();
+        }
+
+        private bool validarFiltro()
+        {
+            if(cboCampo.SelectedIndex < 0)
+            {
+                MessageBox.Show("Por favor, seleccione el campo para filtrar.");
+                return true;
+            }
+            if(cboCriterio.SelectedIndex < 0)
+            {
+                MessageBox.Show("Por favor, seleccione el criterio para filtrar.");
+                return true;
+            }
+            if(cboCampo.SelectedItem.ToString() == "Precio")
+            {
+                if (string.IsNullOrEmpty(txtFiltroAvanzado.Text))
+                {
+                    MessageBox.Show("Debes cargar el filtro para numérico.");
+                    return true;
+                }
+
+                if(!(soloNumeros(txtFiltroAvanzado.Text)))
+                {
+                    MessageBox.Show("Sólo números para filtrar por un campo numérico.");
+                    return true;
+                }
+            }
+
+            return false;
+
+        }
+
+        private bool soloNumeros(string cadena)
+        {
+            foreach(char caracter in cadena)
+            {
+                if(!(char.IsNumber(caracter)))
+                    return false;
+            }
+            return true;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+
+            try
+            {
+                if (validarFiltro())
+                    return;
+                string campo = cboCampo.SelectedItem.ToString();
+                string criterio = cboCriterio.SelectedItem.ToString();
+                string filtro = txtFiltroAvanzado.Text;
+
+                dgvArticulos.DataSource = negocio.filtrar(campo, criterio, filtro);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void cboCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string opcion = cboCampo.SelectedItem.ToString();
+
+            if(opcion == "Precio")
+            {
+                cboCriterio.Items.Clear();
+                cboCriterio.Items.Add("Mayor a");
+                cboCriterio.Items.Add("Menor a");
+                cboCriterio.Items.Add("Igual a");
+            }
+            else
+            {
+                cboCriterio.Items.Clear();
+                cboCriterio.Items.Add("Comienza con");
+                cboCriterio.Items.Add("Termina con");
+                cboCriterio.Items.Add("Contiene");
+            }
         }
     }
 }

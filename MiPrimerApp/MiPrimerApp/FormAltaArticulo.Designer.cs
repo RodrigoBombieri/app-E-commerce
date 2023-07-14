@@ -51,6 +51,7 @@
             // pibArticulo
             // 
             this.pibArticulo.BackColor = System.Drawing.Color.Transparent;
+            this.pibArticulo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pibArticulo.Location = new System.Drawing.Point(305, 23);
             this.pibArticulo.Name = "pibArticulo";
             this.pibArticulo.Size = new System.Drawing.Size(268, 315);
