@@ -59,7 +59,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnSalir.BackColor = System.Drawing.Color.OrangeRed;
             this.btnSalir.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Location = new System.Drawing.Point(321, 609);
             this.btnSalir.Name = "btnSalir";
@@ -179,6 +179,7 @@
             // 
             // grbDetalleArticulo
             // 
+            this.grbDetalleArticulo.BackColor = System.Drawing.Color.Salmon;
             this.grbDetalleArticulo.Controls.Add(this.lblPrecio);
             this.grbDetalleArticulo.Controls.Add(this.lblCategoria);
             this.grbDetalleArticulo.Controls.Add(this.lblMarca);
@@ -202,7 +203,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(800, 680);
             this.Controls.Add(this.grbDetalleArticulo);
             this.Controls.Add(this.btnSalir);

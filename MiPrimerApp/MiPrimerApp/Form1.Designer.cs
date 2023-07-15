@@ -52,7 +52,7 @@ namespace MiPrimerApp
             // 
             this.dgvArticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvArticulos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvArticulos.BackgroundColor = System.Drawing.Color.DarkTurquoise;
+            this.dgvArticulos.BackgroundColor = System.Drawing.Color.Salmon;
             this.dgvArticulos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
@@ -79,7 +79,7 @@ namespace MiPrimerApp
             // 
             // btnAgregarArticulo
             // 
-            this.btnAgregarArticulo.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnAgregarArticulo.BackColor = System.Drawing.Color.OrangeRed;
             this.btnAgregarArticulo.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarArticulo.Location = new System.Drawing.Point(54, 433);
             this.btnAgregarArticulo.Name = "btnAgregarArticulo";
@@ -91,7 +91,7 @@ namespace MiPrimerApp
             // 
             // btnModificarArticulo
             // 
-            this.btnModificarArticulo.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnModificarArticulo.BackColor = System.Drawing.Color.OrangeRed;
             this.btnModificarArticulo.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificarArticulo.Location = new System.Drawing.Point(226, 433);
             this.btnModificarArticulo.Name = "btnModificarArticulo";
@@ -103,7 +103,7 @@ namespace MiPrimerApp
             // 
             // btnEliminarArticulo
             // 
-            this.btnEliminarArticulo.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnEliminarArticulo.BackColor = System.Drawing.Color.OrangeRed;
             this.btnEliminarArticulo.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarArticulo.Location = new System.Drawing.Point(399, 433);
             this.btnEliminarArticulo.Name = "btnEliminarArticulo";
@@ -115,7 +115,7 @@ namespace MiPrimerApp
             // 
             // btnVerDetalle
             // 
-            this.btnVerDetalle.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnVerDetalle.BackColor = System.Drawing.Color.OrangeRed;
             this.btnVerDetalle.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerDetalle.Location = new System.Drawing.Point(802, 433);
             this.btnVerDetalle.Name = "btnVerDetalle";
@@ -209,7 +209,7 @@ namespace MiPrimerApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(1009, 636);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtFiltroAvanzado);

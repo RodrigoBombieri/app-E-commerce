@@ -16,10 +16,7 @@ namespace MiPrimerApp
 {
     public partial class VerDetalleArticulo : Form
     {
-        private List<Articulo> listaArticulos;
-
-        
-       
+      
         public VerDetalleArticulo(Articulo seleccionado)
         {
             

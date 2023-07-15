@@ -143,7 +143,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnAceptar.BackColor = System.Drawing.Color.OrangeRed;
             this.btnAceptar.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.Location = new System.Drawing.Point(224, 648);
             this.btnAceptar.Name = "btnAceptar";
@@ -155,7 +155,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnCancelar.BackColor = System.Drawing.Color.OrangeRed;
             this.btnCancelar.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(546, 648);
             this.btnCancelar.Name = "btnCancelar";
@@ -204,7 +204,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(851, 723);
             this.Controls.Add(this.cboCategoria);
             this.Controls.Add(this.cboMarca);
