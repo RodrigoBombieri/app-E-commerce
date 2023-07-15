@@ -123,6 +123,7 @@ namespace MiPrimerApp
             this.btnVerDetalle.TabIndex = 5;
             this.btnVerDetalle.Text = "Ver Detalles";
             this.btnVerDetalle.UseVisualStyleBackColor = false;
+            this.btnVerDetalle.Click += new System.EventHandler(this.btnVerDetalle_Click);
             // 
             // lblFiltro
             // 

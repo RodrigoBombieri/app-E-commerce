@@ -53,6 +53,8 @@ namespace MiPrimerApp
                 ocultarColumnas();
                 // llama a la función para cargar la imágen en la primera posición
                 CargarImagen(listaArticulos[0].UrlImagen);
+
+                
             }
             catch (Exception ex)
             {
@@ -71,6 +73,19 @@ namespace MiPrimerApp
         }
 
         private void CargarImagen(string imagen)
+        {
+            try
+            {
+                pibArticulos.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+
+                pibArticulos.Load("https://img.freepik.com/premium-vector/no-photo-available-vector-icon-default-image-symbol-picture-coming-soon-web-site-mobile-app_87543-10615.jpg?w=900");
+            }
+        }
+
+        private void cargarImagenDetalle(string imagen)
         {
             try
             {
@@ -237,6 +252,17 @@ namespace MiPrimerApp
                 cboCriterio.Items.Add("Termina con");
                 cboCriterio.Items.Add("Contiene");
             }
+        }
+
+        private void btnVerDetalle_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado;
+            seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+
+            VerDetalleArticulo ver = new VerDetalleArticulo(seleccionado);
+            ver.ShowDialog();
+            Cargar();
+            
         }
     }
 }
