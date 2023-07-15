@@ -209,7 +209,6 @@
             this.Controls.Add(this.pibVerDetalle);
             this.Name = "VerDetalleArticulo";
             this.Text = "VerDetalleArticulo";
-            this.Load += new System.EventHandler(this.VerDetalleArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pibVerDetalle)).EndInit();
             this.grbDetalleArticulo.ResumeLayout(false);
             this.grbDetalleArticulo.PerformLayout();

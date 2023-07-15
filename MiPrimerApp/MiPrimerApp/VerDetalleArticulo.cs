@@ -36,14 +36,6 @@ namespace MiPrimerApp
               
         }
 
-        
-
-        private void VerDetalleArticulo_Load(object sender, EventArgs e)
-        {
-            
-            Cargar();
-        }
-
         private void cargarImagen(string imagen)
         {
             try
@@ -56,27 +48,6 @@ namespace MiPrimerApp
                 pibVerDetalle.Load("https://img.freepik.com/premium-vector/no-photo-available-vector-icon-default-image-symbol-picture-coming-soon-web-site-mobile-app_87543-10615.jpg?w=900");
             }
         }
-
-        private void Cargar()
-        {
-            ArticuloNegocio negocio = new ArticuloNegocio();
-            AccesoDatos datos = new AccesoDatos();
-            
-            try
-            {
-                listaArticulos = negocio.listar();
-                
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.ToString());
-
-            }
-
-            
-        }
-
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
